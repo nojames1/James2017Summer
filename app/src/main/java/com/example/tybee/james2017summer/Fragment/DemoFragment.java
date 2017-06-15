@@ -1,17 +1,26 @@
 package com.example.tybee.james2017summer.Fragment;
 
 
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ListView;
 
 import java.util.ArrayList;
 
+import com.example.tybee.james2017summer.ActivityA;
+import com.example.tybee.james2017summer.AdvanceListViewActivity;
+import com.example.tybee.james2017summer.NotificationActivity;
 import com.example.tybee.james2017summer.R;
+import com.example.tybee.james2017summer.ScaleTypeActivity;
+import com.example.tybee.james2017summer.ViewPagerActivity;
 import com.example.tybee.james2017summer.adapter.ListNormalAdapter;
+
 /**
  * A simple {@link Fragment} subclass.
  * Use the {@link DemoFragment#newInstance} factory method to
@@ -28,17 +37,19 @@ public class DemoFragment extends Fragment {
     private String mParam1;
     private String mParam2;
     private ListView listView;
+    private final Context context;
 
 
     public DemoFragment() {
+        context = getContext();
         contentList = new ArrayList<String>();
         contentList.add("ViewPager");
         contentList.add("ImageScaleType");
         contentList.add("9Patch");
-        contentList.add("A");
-        contentList.add("B");
+        contentList.add("Notification");
+        contentList.add("Advanced List View");
         contentList.add("C");
-        contentList.add("D");
+        contentList.add("LaunchMode");
         contentList.add("E");
         contentList.add("F");
         contentList.add("G");
@@ -82,6 +93,42 @@ public class DemoFragment extends Fragment {
         listView = (ListView)view.findViewById(R.id.fragment_demo_lv);
         ListNormalAdapter adapter = new ListNormalAdapter(this.getContext(),contentList);
         listView.setAdapter(adapter);
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                switch(position){
+                    case 0:
+                        Intent  intent;
+                        intent = new Intent(getActivity(), ViewPagerActivity.class);
+                        startActivity(intent);
+                        break;
+                    case 1:
+                        Intent intent1;
+                        intent1 = new Intent(getActivity(), ScaleTypeActivity.class);
+                        startActivity(intent1);
+                        break;
+                    case 3:
+                        Intent intent3;
+                        intent3 = new Intent(getActivity(), NotificationActivity.class);
+                        startActivity(intent3);
+                        break;
+                    case 4:
+                        Intent intent4;
+                        intent4 = new Intent(getActivity(), AdvanceListViewActivity.class);
+                        startActivity(intent4);
+                        break;
+
+                    case 6:
+                        Intent  intent6;
+                        intent6 = new Intent(getActivity(), ActivityA.class);
+                        startActivity(intent6);
+                        break;
+
+                    default:
+
+                }
+            }
+        });
         return view
                 ;
     }

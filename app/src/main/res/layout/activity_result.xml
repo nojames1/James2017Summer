@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.tybee.james2017summer.ResultActivity"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/activity_result_button_one"
+        android:layout_width="match_parent"
+        android:textAllCaps="false"
+        android:layout_height="60dp"
+        android:gravity="center"
+        android:text="To result 1"/>
+    <Button
+        android:id="@+id/activity_result_button_two"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:textAllCaps="false"
+        android:gravity="center"
+        android:text="To result 2"/>
+
+</LinearLayout>

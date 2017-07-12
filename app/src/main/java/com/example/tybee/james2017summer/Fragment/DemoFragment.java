@@ -10,16 +10,31 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.RadioGroup;
 
 import java.util.ArrayList;
 
 import com.example.tybee.james2017summer.ActivityA;
 import com.example.tybee.james2017summer.AdvanceListViewActivity;
+import com.example.tybee.james2017summer.AdvanceViewPagerActivity;
+import com.example.tybee.james2017summer.AnimationActivity;
+import com.example.tybee.james2017summer.AnimatorActivity;
+import com.example.tybee.james2017summer.CheckBoxActivity;
+import com.example.tybee.james2017summer.DialougeActivity;
+import com.example.tybee.james2017summer.GesutreActivity;
+import com.example.tybee.james2017summer.HandlerActivity;
+import com.example.tybee.james2017summer.NinePatchActivity;
 import com.example.tybee.james2017summer.NotificationActivity;
 import com.example.tybee.james2017summer.R;
+import com.example.tybee.james2017summer.RadioGroupActivity;
+import com.example.tybee.james2017summer.ResultActivity;
+import com.example.tybee.james2017summer.RunnableHandlerActivity;
 import com.example.tybee.james2017summer.ScaleTypeActivity;
+import com.example.tybee.james2017summer.SharedPreferenceActivity;
 import com.example.tybee.james2017summer.ViewPagerActivity;
 import com.example.tybee.james2017summer.adapter.ListNormalAdapter;
+import com.example.tybee.james2017summer.BaseActivity;
+import com.example.tybee.james2017summer.audio.BaseBean;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -48,12 +63,18 @@ public class DemoFragment extends Fragment {
         contentList.add("9Patch");
         contentList.add("Notification");
         contentList.add("Advanced List View");
-        contentList.add("C");
+        contentList.add("Advnace View Pager");
         contentList.add("LaunchMode");
-        contentList.add("E");
-        contentList.add("F");
-        contentList.add("G");
-        contentList.add("H");
+        contentList.add("ActivityResult");
+        contentList.add("Radio Group");
+        contentList.add("CheckBox");
+        contentList.add("Dialog Activity");
+        contentList.add("Handler Activity");
+        contentList.add("Handler Runnable Activity");
+        contentList.add("Animation Activity");
+        contentList.add("Animatior Activity");
+        contentList.add("Gesture Activity");
+        contentList.add("Shared Preference Activity");
     }
 
     /**
@@ -107,6 +128,11 @@ public class DemoFragment extends Fragment {
                         intent1 = new Intent(getActivity(), ScaleTypeActivity.class);
                         startActivity(intent1);
                         break;
+                    case 2:
+                        Intent intent2;
+                        intent2 = new Intent(getActivity(), NinePatchActivity.class);
+                        startActivity(intent2);
+                        break;
                     case 3:
                         Intent intent3;
                         intent3 = new Intent(getActivity(), NotificationActivity.class);
@@ -117,20 +143,81 @@ public class DemoFragment extends Fragment {
                         intent4 = new Intent(getActivity(), AdvanceListViewActivity.class);
                         startActivity(intent4);
                         break;
+                    case 5:
+                        Intent intent5;
+                        intent5 = new Intent(getActivity(), AdvanceViewPagerActivity.class);
+                        startActivity(intent5);
+                        break;
 
                     case 6:
                         Intent  intent6;
                         intent6 = new Intent(getActivity(), ActivityA.class);
+                        intent6.putExtra("String Info","FromDemoFragment");
+                        Bundle bundle = new Bundle();
+                        BaseBean bean = new BaseBean();
+                        bean.setName("bean");
+                        bundle.putString("StringBundle","From Bundle");
+                        bundle.putSerializable("object", bean);
+                        intent6.putExtra("Bundle",bundle);
                         startActivity(intent6);
                         break;
+                    case 7:
+                        Intent intent7;
+                        intent7 = new Intent(getActivity(), ResultActivity.class);
+                        startActivity(intent7);
+                        break;
+                    case 8:
+                        Intent intent8;
+                        intent8 = new Intent(getActivity(), RadioGroupActivity.class);
+                        startActivity(intent8);
+                        break;
+                    case 9:
+                        Intent intent9;
+                        intent9 = new Intent(getActivity(), CheckBoxActivity.class);
+                        startActivity(intent9);
+                        break;
+                    case 10:
+                        Intent intent10;
+                        intent10 = new Intent(getActivity(), DialougeActivity.class);
+                        startActivity(intent10);
+                        break;
+                    case 11:
+                        Intent intent11;
+                        intent11 = new Intent(getActivity(), HandlerActivity.class);
+                        startActivity(intent11);
+                        break;
+                    case 12:
+                        Intent intent12;
+                        intent12 = new Intent(getActivity(), RunnableHandlerActivity.class);
+                        startActivity(intent12);
+                        break;
 
+                    case 13:
+                        Intent intent13;
+                        intent13 = new Intent(getActivity(), AnimationActivity.class);
+                        startActivity(intent13);
+                        break;
+                    case 14:
+                        Intent intent14;
+                        intent14 = new Intent(getActivity(), AnimatorActivity.class);
+                        startActivity(intent14);
+                        break;
+                    case 15:
+                        Intent intent15;
+                        intent15 = new Intent(getActivity(), GesutreActivity.class);
+                        startActivity(intent15);
+                        break;
+                    case 16:
+                        Intent intent16;
+                        intent16 = new Intent(getActivity(), SharedPreferenceActivity.class);
+                        startActivity(intent16);
+                        break;
                     default:
 
                 }
             }
         });
-        return view
-                ;
+        return view;
     }
 
 }

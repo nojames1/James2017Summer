@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.tybee.james2017summer.ServiceActivity">
+
+    <TextView
+        android:id="@+id/service_tv"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:text="waiting"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:layout_alignParentTop="true"/>
+    <Button
+        android:id="@+id/service_bt"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_centerInParent="true"
+        android:text="start"/>
+
+</RelativeLayout>

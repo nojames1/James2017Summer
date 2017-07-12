@@ -1,5 +1,6 @@
 package com.example.tybee.james2017summer;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -9,6 +10,8 @@ import android.widget.Toast;
 
 import com.example.tybee.james2017summer.Fragment.DemoFragment;
 import com.example.tybee.james2017summer.Fragment.WorkFragment;
+
+import butterknife.ButterKnife;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -21,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         initialView();
         setListener();
+        ButterKnife.bind(this);
 
     }
 
@@ -40,9 +44,8 @@ public class MainActivity extends AppCompatActivity {
         View.OnClickListener listener = new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                tv_work.setTextColor(Color.RED);
-                tv_demo.setTextColor(Color.BLACK);
-                getSupportFragmentManager().beginTransaction().replace(R.id.activity_main_fragment,workFragment).commit();
+                Intent i = new Intent(getApplicationContext(), QuizTwoActivity.class);
+                startActivity(i);
 
             }
         };

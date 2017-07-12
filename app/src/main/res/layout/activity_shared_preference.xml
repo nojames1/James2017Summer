@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.tybee.james2017summer.SharedPreferenceActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:orientation="horizontal">
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="email:"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:layout_marginLeft="30dp"/>
+        <EditText
+            android:id="@+id/activity_preference_email"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="30dp"
+            android:layout_marginLeft="30dp"
+            android:hint="input email"
+            android:padding="20dp"
+            android:inputType="textEmailAddress"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:orientation="horizontal">
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="password:"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:layout_marginLeft="30dp"/>
+        <EditText
+            android:id="@+id/activity_preference_password"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="30dp"
+            android:layout_marginLeft="30dp"
+            android:hint="input password"
+            android:padding="20dp"
+            android:inputType="textPassword"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/activity_shared_preference_login"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="Login"
+        android:textSize="20sp"/>
+    <Button
+        android:id="@+id/activity_shared_preference_clear"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="clear cache"
+        android:textSize="20sp"/>
+
+</LinearLayout>

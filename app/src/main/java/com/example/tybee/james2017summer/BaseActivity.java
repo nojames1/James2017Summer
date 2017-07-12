@@ -1,6 +1,5 @@
 package com.example.tybee.james2017summer;
 
-import android.app.PendingIntent;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.Toast;
@@ -14,4 +13,18 @@ public class BaseActivity extends AppCompatActivity {
         Toast.makeText(this,s,Toast.LENGTH_SHORT).show();
     }
 
+    public void shortToast(String s){
+        Toast.makeText(this,s,Toast.LENGTH_SHORT).show();
+    }
+
+
+    public void longToast(String s){
+        Toast.makeText(this,s,Toast.LENGTH_LONG).show();
+    }
+
+    public void goToActivity(Class c){
+        Intent intent = new Intent(this,c);
+        startActivity(intent);
+
+    }
 }

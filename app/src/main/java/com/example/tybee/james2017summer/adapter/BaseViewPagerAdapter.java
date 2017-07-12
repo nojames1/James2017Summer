@@ -1,5 +1,6 @@
 package com.example.tybee.james2017summer.adapter;
 
+import android.content.Context;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
@@ -12,6 +13,7 @@ import java.util.ArrayList;
 
 public class BaseViewPagerAdapter extends FragmentPagerAdapter {
     private ArrayList<Fragment> list;
+    Context context;
 
     public BaseViewPagerAdapter(FragmentManager fm) {
         super(fm);

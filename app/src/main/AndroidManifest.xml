@@ -2,7 +2,13 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.tybee.james2017summer">
 
+    <provider
+        android:name=".content.Provider"
+        android:authorities="com.example.tybee.james2017summer"
+        android:exported="true" />
+
     <application
+        android:name=".JamesApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -19,10 +25,37 @@
         <activity android:name=".ViewPagerActivity" />
         <activity
             android:name=".ActivityA"
-            android:launchMode="singleInstance" />
+            android:launchMode="standard" />
         <activity android:name=".ScaleTypeActivity" />
         <activity android:name=".NotificationActivity" />
-        <activity android:name=".AdvanceListViewActivity"></activity>
+        <activity android:name=".AdvanceListViewActivity" />
+        <activity android:name=".NinePatchActivity" />
+        <activity android:name=".AdvanceViewPagerActivity" />
+        <activity android:name=".QuizOneActivity" />
+        <activity
+            android:name=".ActivityB"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".ActivityC"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".ActivityD"
+            android:launchMode="singleInstance" />
+        <activity android:name=".ResultActivity1" />
+        <activity android:name=".ResultActivity2" />
+        <activity android:name=".ResultActivity" />
+        <activity android:name=".RadioGroupActivity" />
+        <activity android:name=".CheckBoxActivity" />
+        <activity android:name=".DialougeActivity" />
+        <activity android:name=".HandlerActivity" />
+        <activity android:name=".RunnableHandlerActivity" />
+        <activity android:name=".AnimationActivity" />
+        <activity android:name=".AnimatorActivity" />
+        <activity android:name=".GesutreActivity" />
+        <activity android:name=".SharedPreferenceActivity" />
+        <activity android:name=".ServiceActivity" />
+        <activity android:name=".QuizTwoActivity" />
+        <activity android:name=".QuizFiveActivity"></activity>
     </application>
 
 </manifest>

@@ -22,7 +22,7 @@ public class ViewPagerActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_view_pager);
 
-        Toast.makeText(this, "onCreaate", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "onCreate", Toast.LENGTH_SHORT).show();
         viewPager= (ViewPager)findViewById(R.id.activity_view_pager);
         list.add( new RedFragment());
         list.add(new BlueFragment());

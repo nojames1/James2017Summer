@@ -1,6 +1,10 @@
 package com.example.tybee.james2017summer.adapter;
 
 import android.content.Context;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentActivity;
+import android.support.v4.view.ViewPager;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,6 +13,9 @@ import android.widget.BaseAdapter;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.example.tybee.james2017summer.Fragment.BlueFragment;
+import com.example.tybee.james2017summer.Fragment.GreenFragment;
+import com.example.tybee.james2017summer.Fragment.RedFragment;
 import com.example.tybee.james2017summer.R;
 import com.example.tybee.james2017summer.util.UtilDensity;
 
@@ -23,6 +30,8 @@ public class AdvancedListViewAdapter extends BaseAdapter {
     private final Context context;
     private final LayoutInflater inflater;
     private ArrayList<String> list;
+    private ArrayList<Fragment> list2 = new ArrayList<Fragment>();
+
 
 
     public AdvancedListViewAdapter(Context context, ArrayList<String> list){
@@ -57,6 +66,7 @@ public class AdvancedListViewAdapter extends BaseAdapter {
             viewHolder.rl_odd = (RelativeLayout)convertView.findViewById(R.id.odd);
             viewHolder.rl_even = (RelativeLayout)convertView.findViewById(R.id.even);
             viewHolder.tv = (TextView)convertView.findViewById(R.id.activity_advanced_list_item_tv);
+            viewHolder.vp = (ViewPager)convertView.findViewById(R.id.activity_view_pager2);
             convertView.setTag(viewHolder);
         } else {
             viewHolder = (ViewHolder)convertView.getTag();
@@ -96,6 +106,7 @@ public class AdvancedListViewAdapter extends BaseAdapter {
         RelativeLayout rl_odd;
         RelativeLayout rl_even;
         TextView tv;
+        ViewPager vp;
         RelativeLayout.LayoutParams lp;
     }
 }
